@@ -1,0 +1,24 @@
+______PROBLEM 4______
+
+CFL Condition: a=v*dt/dx
+The CFL condition is violated if a>1 or dt>dx/v
+
+To determine stability, we look at the [1-a(1-exp(-ik))] part.
+
+When k=0, the sum reads:
+	=[1-a(1-1)]
+	=[1-a(0)]
+	=1
+From the above, you can clearly see, even if the CFL condition is violated by a>1, it doesnt matter because a is multiplied by 0.
+
+All values of k are stable provided that a is not >>1.
+
+
+
+______PROBLEM 5______
+
+The BC part states that the boundary condition must be periodic or else smooth. If the condition does not apply to these rules, then the assert condition ends the loop. This is done to ensure that the correct boudnary conditions are always applied and to prevent incorrect calculations being done via a mistake. 
+
+______PROBLEM 6______
+
+The pressure point is 2 'units' away. This means that all values are doubled. The 0.5 adjusts these values.
